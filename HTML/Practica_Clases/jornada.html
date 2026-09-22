@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jornada Aprender Haciendo</h1>
+    </header>
+    <nav>
+        <h4>
+            Talleres de HTML - Programaacion III
+        </h4>
+        <ul>
+            <li><a href="#">Presentación</a></li>
+            <li><a href="#">Horario</a></li>
+            <li><a href="#">Inscripción</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <h3><strong>Presentación</strong></h3>
+            <p>
+                La jornada propone constuir nuestras primeras paginas web con HTML. Vamos a aprender haciendo, mediante<br>
+                talleres de estructura, navegación y formularios<br>
+                <br>
+                Esta dirigida a estudiantes que comienzan su formación en desarrollo frontend. No hace falta experiencia previa:<br>
+                trabajaremos con la teoria de clase y pondremos a prueba cada resultado.<br>
+                <br>
+                Fecha: 23 de octubre de 2026. Lugar: Aula de Informática, Facultad Regional Mendoza
+                <br>
+                <br>
+                <Strong>Cupos limitados: revisá los horarios antes de inscribirte. </Strong> <mark> Actividad Gratuita</mark>
+            </p>
+        </h3>
+
+        <h2><img src=https://caddieformacion.es/wp-content/uploads/2024/02/curso-creacion-recurso-digitales.jpg alt= curso width=400 height=300></h2>
+        <h3>Qué Traer </h3>
+        <ul>
+            <li>Computadora Portatil.</li>
+            <li>Un editor de texto o de código.</li>
+            <li>El material teórico de HTML.</li>
+            <li>Un cuaderno para registrar dudas y pruebas.</li>
+        </ul>
+        <h3>Cómo Participar</h3>
+        <p>
+            <ul>
+                <li>1. Consultar el cronograma de talleres.</li>
+                <li>2. Elegir el horario en el que querés asistir.</li>
+                <li>3. Completar la inscripciión de prueba.</li>
+                <li>4. Presentarse con tus materiales diez minutos antes.</li>
+            </ul>
+        </p>
+
+
+
+        <h3>Recomendaciones de asistencia</h3>
+        <p>
+            El aula del ejemplo cuenta con acceso por rampa. Si necesitás alguna adaptación, consultá a la organizción antes de<br>
+            la jornada.
+        </p>
+
+        <h3>Horarios</h3>   
+
+        <table border="1">
+            <caption>
+                Cronograma de talleres
+            </caption>
+            <tr>
+                <th>Bloque</th>
+                <th>Horario</th>
+                <th>Taller</th>
+                <th>Cupos</th>
+            
+
+            <tr>
+                <td rowspawn ="2">Mañana</td>
+                <td>09:00</td>
+                <td>Introducción a HTML</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>Mañana</td>
+                <td>10:00</td>
+                <td>Formularios accesibles</td>
+                <td>15</td>
+            </tr>
+
+            <tr>
+                <td rowspawn ="2">Tarde</td>
+                <td>14:00</td>
+                <td>Tablas y enlaces</td>
+                <td>15</td>
+            </tr>
+
+            <tr>
+                <td>Tarde</td>
+                <td>15:00</td>
+                <td>Proyecto Integrador</td>
+                <td>10</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <th colspan="3" style="text-align: right;">Total de Cupos</th>
+                    <td>60</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h2>Inscripción</h2>
+
+
+
+        <form>
+            <fieldset>
+            <legend>Datos de inscripción</legend>
+            <label for "nombre"> Nombre (Obligatorio, de 3 a 40 caracteres)</label><br>
+            <input required type="text" id="nombre" name="nombre" minlength="3" maxlength="40" placeholder="Ejemplo: Mateo"><br><br>
+
+            <label for "email">Correo (Obligatorio)</label><br>
+            <input required type="email" id="email" name="mail" placeholder="nombre@example"><br><br>
+            
+
+            <label for "lugares">Cantidad de lugares (de 1 a 3)</label><br>
+            <input type="number" id="num" name="numero" min="1" max="3"><br><br>
+
+
+            <label for "cod">Código de comisión (exactamente 3 letras)</label><br>
+            <input required type="text" id="cod" name="pro" pattern="[A-Z]{3}" placeholder="ABC"><br><br>
+
+            <legend>Comentario (opcional, hasta 200 caracteres)</legend>
+            <label for "mensaje"></label>
+            <textarea id ="mensaje" name="mensaje" rows="4" cols="200" maxlength="200"></textarea>
+            
+            </fieldset><br>
+            <button type="submit">Enviar inscripción</button>
+            
+            <h4>Mateo Liendo - Practica HTML</h4>
+            <h6>Jornada, Direccion y datos de contacto para actividad HTML<br></h6>
+            <h4><a href="#top">Volver al inicio</a></h4>
+        </form>
+    </nav>
+</body>
+</html>
