@@ -1,0 +1,264 @@
+/* =================================================================--
+   1. Reset Global y Modelo de Caja
+   ================================================================-- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Fondo general suave y amigable que no cansa la vista */
+  --color-bg: #f4f6f8;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-accent-light: #eff6ff;
+  --color-secondary-accent: #f0fdf4;
+  --color-secondary-border: #bbf7d0;
+  /* Colores solicitados para h2 (.tarjeta__titulo): fondo aquamaria / celeste-claro y texto blanco */
+  --color-h2-bg: #0d9488; /* Aquamaria / Teal vibrante y legible */
+  --color-h2-text: #ffffff; /* Texto blanco */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+/* =================================================================--
+   2. Estilos Base del Cuerpo y Tipografía
+   ================================================================-- */
+body {
+  font-family: var(--font-sans);
+  background-color: aquamarine;
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Selector de elemento general */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Selectores de clase genérica (.intro, .aviso) */
+.intro {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.aviso {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.aviso a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.125rem 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.aviso a:hover {
+  text-decoration: underline;
+}
+
+/* Accesibilidad (a11y) - Enfoque por teclado (:focus) */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Selector de ID (#titulo) */
+#titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.025em;
+}
+
+/* =================================================================--
+   3. Layout de Cabecera (Flexbox)
+   ================================================================-- */
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 1rem;
+}
+
+.cabecera nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.cabecera nav a:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* =================================================================--
+   4. Layout de Cartelera (CSS Grid) y Tarjetas (BEM)
+   ================================================================-- */
+.cartelera {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Bloque .tarjeta con posicionamiento relativo para contexto de apilamiento */
+.tarjeta {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Pseudo-clase estructural :nth-child() para variante visual única en segunda tarjeta */
+.tarjeta:nth-child(2) {
+  border-color: var(--color-secondary-border);
+  background-color: lightblue;
+}
+
+/* Elementos BEM de .tarjeta (h2): Texto blanco y fondo aquamaria / celeste-claro */
+.tarjeta__titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: red;
+  background-color: lightblue;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: var(--shadow-sm);
+}
+
+.tarjeta p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+/* Posicionamiento absoluto y control de capas (z-index) para la etiqueta */
+.tarjeta__etiqueta {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Selector contextual avanzado para enlaces de tarjetas */
+.cartelera .tarjeta__enlace {
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 4px;
+  padding: 0.125rem 0.25rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.cartelera .tarjeta__enlace:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Modificador BEM .tarjeta--destacada con posicionamiento de referencia */
+.tarjeta--destacada {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-accent-light) 100%);
+  border: 2px solid var(--color-primary);
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+}
+
+.tarjeta--destacada:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* =================================================================--
+   5. Diseño Responsive (Mobile First / Media Queries)
+   ================================================================-- */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cabecera nav {
+    width: 100%;
+  }
+
+  .cabecera nav a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Forzar una sola columna en pantallas móviles */
+  .cartelera {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
