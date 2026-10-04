@@ -32,11 +32,11 @@
 }
 
 /* =================================================================--
-   2. Estilos Base del Cuerpo y Tipografía
+  2. Estilos Base del Cuerpo y Tipografía
    ================================================================-- */
 body {
   font-family: var(--font-sans);
-  background-color: aquamarine;
+  background-color: antiquewhite;
   color: var(--color-text);
   line-height: 1.6;
   padding: 2rem 1.5rem;
@@ -99,7 +99,7 @@ input:focus {
 }
 
 /* =================================================================--
-   3. Layout de Cabecera (Flexbox)
+  3. Layout de Cabecera (Flexbox)
    ================================================================-- */
 .cabecera {
   display: flex;
@@ -131,7 +131,7 @@ input:focus {
 }
 
 /* =================================================================--
-   4. Layout de Cartelera (CSS Grid) y Tarjetas (BEM)
+  4. Layout de Cartelera (CSS Grid) y Tarjetas (BEM)
    ================================================================-- */
 .cartelera {
   display: grid;
@@ -235,7 +235,7 @@ input:focus {
 }
 
 /* =================================================================--
-   5. Diseño Responsive (Mobile First / Media Queries)
+  5. Diseño Responsive (Mobile First / Media Queries)
    ================================================================-- */
 @media (max-width: 768px) {
   body {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form>
+        <h1>FOOD STORE</h1>
+        <h2>Iniciar Sesión</h2>
+
+        <div class="input-container">
+        <label for "email">Correo</label>
+        <input required type="email" id="email" name="mail" placeholder="correo@example.com">
+        </div>
+        <div class="input-container">
+        <label for "contrasenia">Contraseña</label>
+        <input required type="password" id="contrasenia" pattern="[a-Z]{8}" name="mail" placeholder="Minimo 8 caracteres">
+        </div>
+        <button type="submit">INGRESAR</button>
+        <p>¿No tenés una cuenta? <a href="#">Registrate acá</a></p>
+    </form>
+</body>
+</html>
