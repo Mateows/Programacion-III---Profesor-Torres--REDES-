@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store | Menú de Clientes</title>
+    <script type="module" crossorigin src="/assets/client-BCfur4HG.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/navigate-BiTYPJSV.js">
+    <link rel="modulepreload" crossorigin href="/assets/main-BWz2DG2Z.js">
+    <link rel="stylesheet" crossorigin href="/assets/style-D4beOtyK.css">
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <header class="app-navbar">
+      <div class="app-brand">
+        <span>🍔</span>
+        <span>Food Store</span>
+        <span class="app-brand__badge">Cliente</span>
+      </div>
+      <div class="app-user-section">
+        <div class="user-chip">
+          <span>👤</span>
+          <span id="userEmail">cliente@foodstore.com</span>
+        </div>
+        <button id="logoutButton" type="button" class="btn-logout">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <!-- Contenido Principal: Menú Food Store -->
+    <main class="store-container">
+      <section class="store-hero">
+        <h1>Menú & Catálogo de Productos</h1>
+        <p>¡Bienvenido/a! Selecciona tus opciones favoritas preparadas al instante.</p>
+      </section>
+
+      <!-- Categorías -->
+      <nav class="category-filter" aria-label="Categorías">
+        <button type="button" class="category-btn active" data-category="todos">Todos</button>
+        <button type="button" class="category-btn" data-category="hamburguesas">Hamburguesas</button>
+        <button type="button" class="category-btn" data-category="acompañamientos">Acompañamientos</button>
+        <button type="button" class="category-btn" data-category="bebidas">Bebidas</button>
+      </nav>
+
+      <!-- Catálogo de Productos -->
+      <section class="products-grid" id="productsGrid">
+        <article class="product-card" data-category="hamburguesas">
+          <div class="product-card__icon">🍔</div>
+          <div>
+            <h2 class="product-card__title">Burger Clásica</h2>
+            <p class="product-card__desc">Medallón de carne 100% vacuna, queso cheddar fundido, lechuga y tomate en pan brioche.</p>
+          </div>
+          <div class="product-card__footer">
+            <span class="product-card__price">$6.500</span>
+            <button type="button" class="btn-gradient btn-gradient--sm btn-add-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="hamburguesas">
+          <div class="product-card__icon">🥓</div>
+          <div>
+            <h2 class="product-card__title">Burger Doble Bacon</h2>
+            <p class="product-card__desc">Doble medallón smash, panceta ahumada crujiente, doble cheddar y salsa BBQ casera.</p>
+          </div>
+          <div class="product-card__footer">
+            <span class="product-card__price">$8.200</span>
+            <button type="button" class="btn-gradient btn-gradient--sm btn-add-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="acompañamientos">
+          <div class="product-card__icon">🍟</div>
+          <div>
+            <h2 class="product-card__title">Papas Rústicas Cheddar</h2>
+            <p class="product-card__desc">Papas cortadas a mano con lluvia de queso cheddar cremoso y ciboulette fresco.</p>
+          </div>
+          <div class="product-card__footer">
+            <span class="product-card__price">$3.800</span>
+            <button type="button" class="btn-gradient btn-gradient--sm btn-add-cart">Agregar</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="bebidas">
+          <div class="product-card__icon">🥤</div>
+          <div>
+            <h2 class="product-card__title">Gaseosa Cola 500ml</h2>
+            <p class="product-card__desc">Bebida gaseosa helada para acompañar tu menú preferido.</p>
+          </div>
+          <div class="product-card__footer">
+            <span class="product-card__price">$1.900</span>
+            <button type="button" class="btn-gradient btn-gradient--sm btn-add-cart">Agregar</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div id="cartToast" class="toast-msg">¡Producto agregado al carrito!</div>
+
+  </body>
+</html>

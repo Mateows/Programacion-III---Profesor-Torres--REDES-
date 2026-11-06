@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store | Iniciar Sesión</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-card">
+      <a href="../../../../index.html" class="auth-card__home" title="Ir al inicio">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </a>
+
+      <!-- Header con Avatar y Línea Neón -->
+      <div class="auth-card__header">
+        <div class="neon-line neon-line--left"></div>
+        <div class="avatar-ring">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+        <div class="neon-line neon-line--right"></div>
+      </div>
+
+      <h1 class="auth-card__title">Food Store</h1>
+      <p class="auth-card__subtitle">Iniciar Sesión</p>
+
+      <form id="login-form" class="auth-form">
+        <div class="input-group">
+          <input id="email" name="email" type="email" placeholder="Login / Email" required autocomplete="email" />
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </span>
+        </div>
+
+        <div class="input-group">
+          <input id="password" name="password" type="password" placeholder="Contraseña" required autocomplete="current-password" />
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+            </svg>
+          </span>
+        </div>
+
+        <button type="submit" class="btn-gradient">Ingresar</button>
+      </form>
+
+      <p id="message" class="auth-message" role="alert"></p>
+      <a href="../registro/registro.html" class="auth-card__link">Crear una cuenta</a>
+    </main>
+
+    <script type="module" src="./login.ts"></script>
+  </body>
+</html>

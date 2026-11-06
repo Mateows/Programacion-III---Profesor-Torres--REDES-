@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store | Panel Administrador</title>
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <header class="app-navbar">
+      <div class="app-brand">
+        <span>🍔</span>
+        <span>Food Store</span>
+        <span class="app-brand__badge" style="background: linear-gradient(90deg, #ff7373, #ff416c);">Admin</span>
+      </div>
+      <div class="app-user-section">
+        <div class="user-chip">
+          <span>🛡️</span>
+          <span id="adminEmail">admin@foodstore.com</span>
+        </div>
+        <button id="logoutButton" type="button" class="btn-logout">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main class="store-container">
+      <section class="store-hero">
+        <h1>Panel de Control de Administración</h1>
+        <p>Gestión de usuarios y accesos autorizados del sistema Food Store.</p>
+      </section>
+
+      <h2>Usuarios Registrados</h2>
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <!-- Se carga dinámicamente con home.ts -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script type="module" src="./home.ts"></script>
+    <script type="module" src="../../../main.ts"></script>
+  </body>
+</html>
