@@ -3,9 +3,24 @@ import type { IUser } from "../types/IUser";
 const USERS_KEY = "users";
 const SESSION_KEY = "userData";
 
+const DEFAULT_USERS: IUser[] = [
+  {
+    email: "admin@foodstore.com",
+    password: "admin",
+    role: "admin",
+  },
+];
+
+export const saveUsers = (users: IUser[]): void => {
+  localStorage.setItem(USERS_KEY, JSON.stringify(users));
+};
+
 export const getUsers = (): IUser[] => {
   const storedUsers = localStorage.getItem(USERS_KEY);
-  if (!storedUsers) return [];
+  if (!storedUsers) {
+    saveUsers(DEFAULT_USERS);
+    return DEFAULT_USERS;
+  }
 
   try {
     const users: unknown = JSON.parse(storedUsers);
@@ -13,10 +28,6 @@ export const getUsers = (): IUser[] => {
   } catch {
     return [];
   }
-};
-
-export const saveUsers = (users: IUser[]): void => {
-  localStorage.setItem(USERS_KEY, JSON.stringify(users));
 };
 
 export const addUser = (user: IUser): void => {

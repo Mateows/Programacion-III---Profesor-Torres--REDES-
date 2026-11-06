@@ -243,6 +243,14 @@ body.auth-page {
   text-decoration: underline;
 }
 
+.auth-card__hint {
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+  text-align: center;
+}
+
 /* ====================================================
    APLICACIÓN COMPLETA (STORE & ADMIN NAVBAR Y LAYOUT)
 ==================================================== */
@@ -404,9 +412,12 @@ body.auth-page {
 }
 
 .product-card__icon {
-  font-size: 3rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff8c69;
   margin-bottom: 1rem;
+  height: 48px;
 }
 
 .product-card__title {

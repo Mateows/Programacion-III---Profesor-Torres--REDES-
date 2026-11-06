@@ -10,13 +10,17 @@
     <!-- Barra de Navegación -->
     <header class="app-navbar">
       <div class="app-brand">
-        <span>🍔</span>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+        </svg>
         <span>Food Store</span>
         <span class="app-brand__badge">Cliente</span>
       </div>
       <div class="app-user-section">
         <div class="user-chip">
-          <span>👤</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
           <span id="userEmail">cliente@foodstore.com</span>
         </div>
         <button id="logoutButton" type="button" class="btn-logout">Cerrar sesión</button>
@@ -27,7 +31,7 @@
     <main class="store-container">
       <section class="store-hero">
         <h1>Menú & Catálogo de Productos</h1>
-        <p>¡Bienvenido/a! Selecciona tus opciones favoritas preparadas al instante.</p>
+        <p>Selecciona tus opciones favoritas preparadas al instante.</p>
       </section>
 
       <!-- Categorías -->
@@ -41,7 +45,11 @@
       <!-- Catálogo de Productos -->
       <section class="products-grid" id="productsGrid">
         <article class="product-card" data-category="hamburguesas">
-          <div class="product-card__icon">🍔</div>
+          <div class="product-card__icon">
+            <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
+              <path d="M19 13H5c-1.1 0-2 .9-2 2v1h18v-1c0-1.1-.9-2-2-2zM4 18h16v2H4zm8-13c-4.42 0-8 2.69-8 6h16c0-3.31-3.58-6-8-6z"/>
+            </svg>
+          </div>
           <div>
             <h2 class="product-card__title">Burger Clásica</h2>
             <p class="product-card__desc">Medallón de carne 100% vacuna, queso cheddar fundido, lechuga y tomate en pan brioche.</p>
@@ -53,7 +61,11 @@
         </article>
 
         <article class="product-card" data-category="hamburguesas">
-          <div class="product-card__icon">🥓</div>
+          <div class="product-card__icon">
+            <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
+              <path d="M19 12H5c-1.1 0-2 .9-2 2v1h18v-1c0-1.1-.9-2-2-2zm0 4H5c-1.1 0-2 .9-2 2v1h18v-1c0-1.1-.9-2-2-2zM4 21h16v2H4zm8-16c-4.42 0-8 2.69-8 6h16c0-3.31-3.58-6-8-6z"/>
+            </svg>
+          </div>
           <div>
             <h2 class="product-card__title">Burger Doble Bacon</h2>
             <p class="product-card__desc">Doble medallón smash, panceta ahumada crujiente, doble cheddar y salsa BBQ casera.</p>
@@ -65,7 +77,11 @@
         </article>
 
         <article class="product-card" data-category="acompañamientos">
-          <div class="product-card__icon">🍟</div>
+          <div class="product-card__icon">
+            <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
+              <path d="M7 2h2v7H7zm4 0h2v7h-2zm4 0h2v7h-2zM5 10l1.5 12h11L19 10H5zm12 10H7l-1-8h12l-1 8z"/>
+            </svg>
+          </div>
           <div>
             <h2 class="product-card__title">Papas Rústicas Cheddar</h2>
             <p class="product-card__desc">Papas cortadas a mano con lluvia de queso cheddar cremoso y ciboulette fresco.</p>
@@ -77,7 +93,11 @@
         </article>
 
         <article class="product-card" data-category="bebidas">
-          <div class="product-card__icon">🥤</div>
+          <div class="product-card__icon">
+            <svg viewBox="0 0 24 24" width="38" height="38" fill="currentColor">
+              <path d="M18.06 23h1.66c.84 0 1.53-.65 1.63-1.48L23 5.05h-5V1h-1.97v4.05h-4.97V1h-1.97v4.05H4.12l1.65 16.47c.1.83.79 1.48 1.63 1.48h10.66zM6.21 7.05h13.58l-1.35 13.95H7.56L6.21 7.05z"/>
+            </svg>
+          </div>
           <div>
             <h2 class="product-card__title">Gaseosa Cola 500ml</h2>
             <p class="product-card__desc">Bebida gaseosa helada para acompañar tu menú preferido.</p>
@@ -90,7 +110,7 @@
       </section>
     </main>
 
-    <div id="cartToast" class="toast-msg">¡Producto agregado al carrito!</div>
+    <div id="cartToast" class="toast-msg">Producto agregado al carrito</div>
 
     <script type="module" src="./home.ts"></script>
     <script type="module" src="../../../main.ts"></script>

@@ -1,5 +1,5 @@
 import type { IUser } from "../../../types/IUser";
-import { addUser, getUsers, removeUser } from "../../../utils/localStorage";
+import { addUser, getUsers, saveUser } from "../../../utils/localStorage";
 import { navigate } from "../../../utils/navigate";
 
 const form = document.getElementById("register-form");
@@ -36,13 +36,13 @@ form.addEventListener("submit", (event: SubmitEvent) => {
 
   const user: IUser = { email, password, role: "client" };
   addUser(user);
-  removeUser();
+  saveUser(user);
 
   message.className = "auth-message auth-message--success";
-  message.textContent = "¡Cuenta creada! Redirigiendo al Login...";
+  message.textContent = "Cuenta creada. Ingresando al menú...";
   form.reset();
 
   window.setTimeout(() => {
-    navigate("../login/login.html");
-  }, 400);
+    navigate("../../client/home/home.html");
+  }, 350);
 });
